@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="13" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[VerifyLabelsCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[VerifyPageLogoCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[VerifyPageTitleCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[VerifyPageURLCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[LoginCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[VerifyFilterDropDownCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[verifyURLCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[AddItemToCartTestCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[shoppingCartTestCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[verifyPageURLCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[verifylabelsCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[yourinformationTestCompleted succesfully]]>
+    </line>
+    <line>
+      <![CDATA[OverviewTestCompleted succesfully]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-09-05T13:11:32 IST" name="Suite" finished-at="2023-09-05T13:11:35 IST" duration-ms="3033">
+    <groups>
+    </groups>
+    <test started-at="2023-09-05T13:11:32 IST" name="Test" finished-at="2023-09-05T13:11:35 IST" duration-ms="3033">
+      <class name="com.saucelab.Testcases.OverViewPageTest">
+        <test-method signature="OverviewTest()[pri:0, instance:com.saucelab.Testcases.OverViewPageTest@27329d2a]" started-at="2023-09-05T13:11:34 IST" name="OverviewTest" finished-at="2023-09-05T13:11:35 IST" duration-ms="728" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[OverviewTestCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- OverviewTest -->
+      </class> <!-- com.saucelab.Testcases.OverViewPageTest -->
+      <class name="com.saucelab.Testcases.ProductPageTest">
+        <test-method signature="VerifyFilterDropDown()[pri:0, instance:com.saucelab.Testcases.ProductPageTest@10a98392]" started-at="2023-09-05T13:11:33 IST" name="VerifyFilterDropDown" finished-at="2023-09-05T13:11:33 IST" duration-ms="71" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VerifyFilterDropDownCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyFilterDropDown -->
+        <test-method signature="verifyURL()[pri:0, instance:com.saucelab.Testcases.ProductPageTest@10a98392]" started-at="2023-09-05T13:11:33 IST" name="verifyURL" finished-at="2023-09-05T13:11:33 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[verifyURLCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyURL -->
+        <test-method signature="AddItemToCartTest()[pri:1, instance:com.saucelab.Testcases.ProductPageTest@10a98392]" started-at="2023-09-05T13:11:33 IST" name="AddItemToCartTest" finished-at="2023-09-05T13:11:33 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[AddItemToCartTestCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddItemToCartTest -->
+      </class> <!-- com.saucelab.Testcases.ProductPageTest -->
+      <class name="com.saucelab.Testcases.FinishPageTest">
+        <test-method signature="FinishTest()[pri:0, instance:com.saucelab.Testcases.FinishPageTest@2f894ad9]" started-at="2023-09-05T13:11:35 IST" name="FinishTest" finished-at="2023-09-05T13:11:35 IST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1067)
+at org.testng.Assert.assertEquals(Assert.java:1031)
+at org.testng.Assert.assertEquals(Assert.java:1077)
+at com.saucelab.Testcases.FinishPageTest.FinishTest(FinishPageTest.java:17)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinishTest -->
+      </class> <!-- com.saucelab.Testcases.FinishPageTest -->
+      <class name="com.saucelab.Testcases.YourCartPageTest">
+        <test-method signature="shoppingCartTest()[pri:0, instance:com.saucelab.Testcases.YourCartPageTest@30839e44]" started-at="2023-09-05T13:11:33 IST" name="shoppingCartTest" finished-at="2023-09-05T13:11:34 IST" duration-ms="367" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[shoppingCartTestCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- shoppingCartTest -->
+        <test-method signature="verifyPageURL()[pri:0, instance:com.saucelab.Testcases.YourCartPageTest@30839e44]" started-at="2023-09-05T13:11:34 IST" name="verifyPageURL" finished-at="2023-09-05T13:11:34 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[verifyPageURLCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyPageURL -->
+      </class> <!-- com.saucelab.Testcases.YourCartPageTest -->
+      <class name="com.saucelab.Testcases.LoginTest">
+        <test-method is-config="true" signature="ApplicationSetup()[pri:0, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:32 IST" name="ApplicationSetup" finished-at="2023-09-05T13:11:32 IST" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ApplicationSetup -->
+        <test-method signature="VerifyLabels()[pri:0, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:32 IST" name="VerifyLabels" finished-at="2023-09-05T13:11:32 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VerifyLabelsCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyLabels -->
+        <test-method signature="VerifyPageLogo()[pri:0, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:32 IST" name="VerifyPageLogo" finished-at="2023-09-05T13:11:32 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VerifyPageLogoCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyPageLogo -->
+        <test-method signature="VerifyPageTitle()[pri:0, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:32 IST" name="VerifyPageTitle" finished-at="2023-09-05T13:11:32 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VerifyPageTitleCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyPageTitle -->
+        <test-method signature="VerifyPageURL()[pri:0, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:32 IST" name="VerifyPageURL" finished-at="2023-09-05T13:11:32 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VerifyPageURLCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyPageURL -->
+        <test-method signature="Login()[pri:1, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:32 IST" name="Login" finished-at="2023-09-05T13:11:33 IST" duration-ms="833" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[LoginCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucelab.Testcases.LoginTest@51ab1ee3]" started-at="2023-09-05T13:11:35 IST" name="tearDown" finished-at="2023-09-05T13:11:35 IST" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucelab.Testcases.LoginTest -->
+      <class name="com.saucelab.Testcases.CheckoutInformationPageTest">
+        <test-method signature="verifylabels()[pri:0, instance:com.saucelab.Testcases.CheckoutInformationPageTest@7fb53256]" started-at="2023-09-05T13:11:34 IST" name="verifylabels" finished-at="2023-09-05T13:11:34 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[verifylabelsCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifylabels -->
+        <test-method signature="yourinformationTest()[pri:0, instance:com.saucelab.Testcases.CheckoutInformationPageTest@7fb53256]" started-at="2023-09-05T13:11:34 IST" name="yourinformationTest" finished-at="2023-09-05T13:11:34 IST" duration-ms="482" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[yourinformationTestCompleted succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- yourinformationTest -->
+      </class> <!-- com.saucelab.Testcases.CheckoutInformationPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
