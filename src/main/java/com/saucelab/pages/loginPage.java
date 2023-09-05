@@ -1,6 +1,5 @@
 package com.saucelab.pages;
 
-import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,6 +11,8 @@ import org.rev.selenium.base.BaseClass;
 public class loginPage extends BaseClass {
 
 	public static Logger logs = LogManager.getLogger(loginPage.class.getName());
+	
+	
 	@FindBy(xpath = "//input[@id='user-name']")
 	WebElement Username;
 	@FindBy(xpath = "//input[@id='password']")
@@ -20,8 +21,11 @@ public class loginPage extends BaseClass {
 	WebElement Loginbtn;
 	@FindBy(xpath = "//img[@class='bot_column']")
 	WebElement Logo;
+	@FindBy(xpath = "//h3[normalize-space()='Epic sadface: Username is required']")
+	WebElement userNameError;
+	@FindBy(xpath = "//h3[normalize-space()='Epic sadface: Password is required']")
+	WebElement passwordError;
 	
-
 	public loginPage() {
 		PageFactory.initElements(driver, this);
 		driver.get(fr.configData("TestURL"));
@@ -42,11 +46,23 @@ public class loginPage extends BaseClass {
 		return PassTab.getAttribute("placeholder");
 	}
 
-	public void SignIn() throws IOException {
-		Username.sendKeys(fr.configData("Username"));
-		PassTab.sendKeys(fr.configData("Password"));
+	public void SignIn(String userName, String password){
+		Username.clear();
+		Username.sendKeys(userName);
+		PassTab.clear();
+		PassTab.sendKeys(password);
 		Loginbtn.click();
-		//return new ProductPage();
 	}
+	
+	public boolean userNameError() {
+		
+		return userNameError.isDisplayed();
+	}
+	
+public boolean passWordError() {
+		
+		return passwordError.isDisplayed();
+	}
+
 
 }

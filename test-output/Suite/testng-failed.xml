@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="utils.Listerners"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.saucelab.Testcases.FinishPageTest">
+      <class name="com.saucelab.Testcases.LoginTest">
+        <methods>
+          <include name="VerifyPageLogo"/>
+          <include name="Login_03"/>
+          <include name="ApplicationSetup"/>
+          <include name="Login_01"/>
+          <include name="tearDown"/>
+          <include name="VerifyPageURL"/>
+          <include name="VerifyLabels"/>
+        </methods>
+      </class> <!-- com.saucelab.Testcases.LoginTest -->
+      <class name="com.saucelab.Testcases.ProductPageTest">
         <methods>
           <include name="ApplicationSetup"/>
           <include name="tearDown"/>
-          <include name="FinishTest"/>
+          <include name="pricetagTest"/>
+          <include name="AddItemToCartTest"/>
         </methods>
-      </class> <!-- com.saucelab.Testcases.FinishPageTest -->
+      </class> <!-- com.saucelab.Testcases.ProductPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

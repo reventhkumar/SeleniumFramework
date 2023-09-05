@@ -12,11 +12,11 @@ public class ProductPageTest extends BaseClass{
 
 	ProductPage pr = new ProductPage();
 
-
+	//TC_ProductList_01
 	@Test(priority = 1)
 	public void AddItemToCartTest() throws IOException {
-		System.out.println("From ProductPageTest");
 		pr.productSelection();
+		assertEquals(pr.cartbatch(), true);
 	}
 	@Test
 	public void verifyURL() throws IOException
@@ -30,5 +30,10 @@ public class ProductPageTest extends BaseClass{
 	public void VerifyFilterDropDown() {
 		pr.PriceFilterDropdown();
 		
+	}
+	
+	@Test
+	public void pricetagTest() {
+		pr.pricetags();
 	}
 }

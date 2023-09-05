@@ -10,10 +10,9 @@ import org.testng.annotations.Test;
 import com.saucelab.pages.loginPage;
 
 public class LoginTest extends BaseClass {
-	
-	loginPage lp = new loginPage();
+
 	public static Logger logs = LogManager.getLogger(LoginTest.class.getName());
-	
+	loginPage lp = new loginPage();
 
 	@Test
 	public void VerifyPageTitle() throws IOException, InterruptedException {
@@ -22,6 +21,7 @@ public class LoginTest extends BaseClass {
 		assertEquals(actualTitle, ExpectedTitle);
 		logs.info("Starting to veirfy page title");
 	}
+
 	@Test
 	public void VerifyPageLogo() {
 		boolean flag = lp.IslogoDisplayed();
@@ -45,11 +45,24 @@ public class LoginTest extends BaseClass {
 		assertEquals(lp.PasswordLable(), ExpectedPasswordLabel);
 	}
 
-	//TC_Login_01
+	// TC_Login_02 userNameError
+	@Test
+	public void Login_02() {
+		lp.SignIn("", fr.configData("Password"));
+		assertEquals(lp.userNameError(), true);
+	}
+
+	// TC_Login_03 passWordError
+	@Test
+	public void Login_03() {
+		lp.SignIn(fr.configData("Username"), "");
+		assertEquals(lp.passWordError(), true);
+	}
+
+	// TC_Login_01
 	@Test(priority = 1)
-	public void Login() throws IOException {
-		System.out.println("From LoginTest");
-		lp.SignIn();
+	public void Login_01() {
+		lp.SignIn(fr.configData("Username"), fr.configData("Password"));
 	}
 
 }

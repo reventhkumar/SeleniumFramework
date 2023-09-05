@@ -1,6 +1,5 @@
 package com.saucelab.pages;
 
-import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,6 +21,12 @@ public class ProductPage extends BaseClass {
 	WebElement Cartbtn;
 	@FindBy(xpath = "//select[@class='product_sort_container']")
 	WebElement priceFilterddElement;
+	@FindBy(xpath = "//span[@class='fa-layers-counter shopping_cart_badge']")
+	WebElement cartBatch;
+	@FindBy(xpath = "(//div[@class='inventory_list']//div[1]//div[3]//div[1]")
+	WebElement pricetags;
+	
+	
 
 	public ProductPage() {
 		PageFactory.initElements(driver, this);
@@ -31,12 +36,21 @@ public class ProductPage extends BaseClass {
 		Select select = new Select(priceFilterddElement);
 		select.selectByValue("lohi");
 	}
-
-	public void productSelection() throws IOException {
+	
+	public void productSelection(){
 		P1AddtoCart.click();
 		P2AddtoCart.click();
 		Cartbtn.click();
-
+	}
+	
+	public boolean cartbatch() {
+		return cartBatch.isDisplayed();
+	}
+	
+	public void pricetags()
+	{
+		System.out.println(pricetags.getText());
+		
 	}
 
 }
