@@ -9,8 +9,8 @@
       <class name="com.saucelab.Testcases.FinishPageTest">
         <methods>
           <include name="ApplicationSetup"/>
-          <include name="FinishTest"/>
           <include name="tearDown"/>
+          <include name="FinishTest"/>
         </methods>
       </class> <!-- com.saucelab.Testcases.FinishPageTest -->
     </classes>

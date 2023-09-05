@@ -45,6 +45,7 @@ public class LoginTest extends BaseClass {
 		assertEquals(lp.PasswordLable(), ExpectedPasswordLabel);
 	}
 
+	//TC_Login_01
 	@Test(priority = 1)
 	public void Login() throws IOException {
 		System.out.println("From LoginTest");

@@ -17,7 +17,7 @@ public class ScreenCapture extends BaseClass{
 		String datestamp = date.toString().replace(" ", "-").replace(":", "-");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenshotFile, new File(".//screenshots//" + datestamp + ".png"));
+			FileUtils.copyFile(screenshotFile, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\" + datestamp + ".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
