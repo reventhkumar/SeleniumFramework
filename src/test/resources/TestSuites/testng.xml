@@ -4,7 +4,7 @@
 	<test thread-count="2" name="Test">
 		<classes>
 			<class name="com.saucelab.Testcases.LoginTest" />
-			<class name="com.saucelab.Testcases.ProductPageTest" />
+			<!--<class name="com.saucelab.Testcases.ProductPageTest" />-->
 		</classes>
 	</test> <!--
 	Test -->

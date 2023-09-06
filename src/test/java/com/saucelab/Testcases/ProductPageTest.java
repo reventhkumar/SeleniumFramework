@@ -2,38 +2,28 @@ package com.saucelab.Testcases;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.IOException;
 import org.rev.selenium.base.BaseClass;
 import org.testng.annotations.Test;
+
+import com.saucelab.pages.ProductListPage;
 import com.saucelab.pages.ProductPage;
 
-public class ProductPageTest extends BaseClass{
+public class ProductPageTest extends BaseClass {
 
+	ProductPage pP = new ProductPage();
+	ProductListPage pLP = new ProductListPage();
 
-	ProductPage pr = new ProductPage();
+	@Test
+	public void VerifyAddToCart() {
+		pP.addTocart();
+		assertEquals(pLP.cartbatch(), true);
 
-	//TC_ProductList_01
-	@Test(priority = 1)
-	public void AddItemToCartTest() throws IOException {
-		pr.productSelection();
-		assertEquals(pr.cartbatch(), true);
 	}
 	@Test
-	public void verifyURL() throws IOException
-	{
-		String ExpectedURL = fr.configData("ExpectedURLProductPage");
+	public void VerifyBackBtn() {
+		pP.backbtn();
 		String ActualURL = driver.getCurrentUrl();
-		assertEquals(ActualURL, ExpectedURL);
-		
-	}
-	@Test
-	public void VerifyFilterDropDown() {
-		pr.PriceFilterDropdown();
-		
-	}
-	
-	@Test
-	public void pricetagTest() {
-		pr.pricetags();
+		String expectedURL = fr.configData("ProductPageURL");
+		assertEquals(ActualURL, expectedURL);
 	}
 }

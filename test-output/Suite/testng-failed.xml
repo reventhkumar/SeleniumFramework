@@ -8,20 +8,12 @@
           <include name="VerifyPageLogo"/>
           <include name="Login_03"/>
           <include name="ApplicationSetup"/>
-          <include name="Login_01"/>
           <include name="tearDown"/>
+          <include name="VerifyPageTitle"/>
           <include name="VerifyPageURL"/>
           <include name="VerifyLabels"/>
         </methods>
       </class> <!-- com.saucelab.Testcases.LoginTest -->
-      <class name="com.saucelab.Testcases.ProductPageTest">
-        <methods>
-          <include name="ApplicationSetup"/>
-          <include name="tearDown"/>
-          <include name="pricetagTest"/>
-          <include name="AddItemToCartTest"/>
-        </methods>
-      </class> <!-- com.saucelab.Testcases.ProductPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

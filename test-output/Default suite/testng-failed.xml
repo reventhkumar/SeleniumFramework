@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.saucelab.Testcases.ProductPageTest">
+      <class name="com.saucelab.Testcases.ProductListTest">
         <methods>
-          <include name="ApplicationSetup"/>
-          <include name="tearDown"/>
           <include name="pricetagTest"/>
+          <include name="ApplicationSetup"/>
+          <include name="AddItemToCartTest"/>
+          <include name="tearDown"/>
+          <include name="Teststart"/>
         </methods>
-      </class> <!-- com.saucelab.Testcases.ProductPageTest -->
+      </class> <!-- com.saucelab.Testcases.ProductListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
