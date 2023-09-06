@@ -1,6 +1,5 @@
 package com.saucelab.pages;
 
-import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -34,7 +33,7 @@ public class CheckoutInformationPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void Checkout() throws IOException {
+	public void Checkout(){
 		
 		firstName.sendKeys(fr.configData("Name"));
 		lastName.sendKeys(fr.configData("Last"));

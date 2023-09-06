@@ -1,6 +1,6 @@
 package com.saucelab.pages;
 
-import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,15 +11,17 @@ public class YourCartPage extends BaseClass {
 	WebElement Checkoutbtn;
 	@FindBy(xpath = "//button[@class='btn_secondary cart_button']")
 	WebElement removebtn;
-	@FindBy(xpath = "//a[@class='btn_secondary']")
+	@FindBy(xpath = "//a[normalize-space()='Continue Shopping']")
 	WebElement continueshoppingbtn;
+	@FindBy(xpath = "//*[name()='path' and contains(@fill,'currentCol')]")
+	WebElement cartbtn;
 	
 
 	public YourCartPage() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void proccedToCheckout() throws IOException {
+	public void proccedToCheckout(){
 		Checkoutbtn.click();
 	}
 	
@@ -27,8 +29,13 @@ public class YourCartPage extends BaseClass {
 		removebtn.click();
 	}
 	
+	public void openCart() {
+		cartbtn.click();
+	}
+	
 	public void continueShopping() {
 		continueshoppingbtn.click();
+		cartbtn.click();
 	}
 
 }

@@ -13,17 +13,21 @@ public class ProductPage extends BaseClass{
 	WebElement addToCart;
 	@FindBy(xpath = "//button[normalize-space()='<- Back']")
 	WebElement backBtn;
+	@FindBy(xpath = "//div[normalize-space()='Sauce Labs Backpack']")
+	WebElement selectproduct;
 	
 	public ProductPage() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void addTocart() {
+		selectproduct.click();
 		addToCart.click();
 		
 	}
 	
 	public void backbtn() {
+		selectproduct.click();
 		backBtn.click();
 		
 	}

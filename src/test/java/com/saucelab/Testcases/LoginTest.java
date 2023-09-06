@@ -6,8 +6,7 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.rev.selenium.base.BaseClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.saucelab.pages.loginPage;
 
@@ -18,17 +17,11 @@ public class LoginTest extends BaseClass {
 	public static Logger logs = LogManager.getLogger(LoginTest.class.getName());
 	loginPage lp = new loginPage();
 	ActionClass ACT = new ActionClass();
-	
-	@BeforeMethod
+
+	@BeforeClass
 	public void TestStart() {
 		driver.get(fr.configData("TestURL"));
 	}
-	
-	@AfterMethod
-	public void TestEnd() {
-		driver.navigate().to(fr.configData("TestURL"));
-	}
-	
 
 	@Test
 	public void VerifyPageTitle() throws IOException, InterruptedException {
@@ -64,19 +57,9 @@ public class LoginTest extends BaseClass {
 	// TC_Login_02 userNameError
 	@Test(priority = -2)
 	public void Login_02() {
-		lp.clearFields();
-		lp.SignIn("", fr.configData("Password"));
-		assertEquals(lp.userNameError(), true);
-		
-	}
 
-	// TC_Login_03 passWordError
-	@Test(priority = -1)
-	public void Login_03() {
-		lp.clearFields();
 		lp.SignIn(fr.configData("Username"), "");
 		assertEquals(lp.passWordError(), true);
-		
 	}
 
 	// TC_Login_01

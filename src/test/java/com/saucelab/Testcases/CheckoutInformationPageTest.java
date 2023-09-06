@@ -1,24 +1,40 @@
 package com.saucelab.Testcases;
 
 import static org.testng.Assert.assertEquals;
-
-import java.io.IOException;
-
 import org.rev.selenium.base.BaseClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.saucelab.pages.CheckoutInformationPage;
+import com.saucelab.pages.ProductPage;
+import com.saucelab.pages.YourCartPage;
+import com.saucelab.pages.loginPage;
 
 public class CheckoutInformationPageTest extends BaseClass {
 
 	CheckoutInformationPage cip = new CheckoutInformationPage();
+	loginPage lp = new loginPage();
+	ProductPage pP = new ProductPage();
+	YourCartPage yCP = new YourCartPage();
 	
-	
-	@Test
-	public void yourinformationTest() throws IOException {
-		cip.Checkout();
+	@BeforeClass
+	public void testSetup() {
+		lp.DSignIn();
+		yCP.openCart();
+		
 	}
 	
+	@Test(priority = -2)
+	public void proceedCheckout() {
+		yCP.proccedToCheckout();
+		assertEquals(driver.getCurrentUrl(),fr.configData("ExpectedCheckoutYourInfoURL"));
+	}
 	@Test
+	public void yourinformationTest(){
+		cip.Checkout();
+		
+	}
+	
+	@Test(priority = -1)
 	public void verifylabels() {
 		String expectedfirstNameLabel = fr.configData("firstNameLabel");
 		String expectedlastNameLabel = fr.configData("lastNameLabel");

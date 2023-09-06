@@ -13,7 +13,7 @@ public class ProductListPage extends BaseClass {
 	FileReaders fr = new FileReaders();
 	
 
-	@FindBy(xpath = "//div[@class='inventory_list']//div[1]//div[3]//button[1]")
+	@FindBy(xpath = "//body//div[@id='page_wrapper']//div[@id='inventory_container']//div[@id='inventory_container']//div[2]//div[3]//button[1]")
 	WebElement P1AddtoCart;
 	@FindBy(xpath = "//div[@class='inventory_list']//div[1]//div[3]//button[1]")
 	WebElement P2AddtoCart;

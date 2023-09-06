@@ -19,7 +19,10 @@ public class OverViewPage extends BaseClass{
 	public void CheckoutOverview()
 	{
 		Finishbtn.click();
-		//return new finishPage();
+	}
+	
+	public void cancelBtn() {
+		Cancelbtn.click();
 	}
 	
 }

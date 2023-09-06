@@ -21,6 +21,7 @@ public class finishPage extends BaseClass {
 	public finishPage() {
 		PageFactory.initElements(driver, this);
 	}
+	
 
 	public void Inventory() {
 		sidebar.click();
