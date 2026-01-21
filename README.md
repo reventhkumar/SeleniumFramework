@@ -1,4 +1,4 @@
-# Rev's Selenium Automation Framework
+# Swaglabs Selenium Automation Framework
 
 ## Overview
 
